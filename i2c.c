@@ -16,7 +16,7 @@ status_t i2c_read(
         register_address);
 
     /* Setting the output to some arbitrary value */
-    for (size_t i = 0; i < length; ++i) {
+    for (size_t i = 0; i < length; i++) {
         buffer[i] = 0xff;
     }
 
@@ -35,7 +35,7 @@ status_t i2c_write(
         bus_address,
         register_address);
 
-    for (size_t i = 0; i < length; ++i) {
+    for (size_t i = 0; i < length; i++) {
         printf("%p", buffer);
     }
     printf("\n");
